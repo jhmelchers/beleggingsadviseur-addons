@@ -1,0 +1,24 @@
+# Update-agent (ADR-014): controleert handtekening en CI, test, vraagt goedkeuring via een HA-melding en installeert.
+# Wordt NIET door zichzelf bijgewerkt; bijwerken gaat handmatig in Home Assistant.
+name: Beleggingsadviseur update-agent
+description: Gecontroleerde updates van de beleggingsadviseur, met goedkeuring via een melding
+slug: update_agent
+url: https://github.com/jhmelchers/beleggingsadviseur-addons
+version: "0.1.4"
+image: ghcr.io/jhmelchers/beleggingsadviseur-update-agent
+arch: [aarch64]
+startup: services
+boot: auto
+init: false
+hassio_api: true
+hassio_role: manager
+homeassistant_api: true
+ports: {}
+options:
+  melding: ""
+  ghcr_token: ""
+  github_token: ""
+schema:
+  melding: match(^notify\.[a-z0-9_]+$)
+  ghcr_token: password
+  github_token: password
