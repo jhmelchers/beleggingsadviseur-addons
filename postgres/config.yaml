@@ -1,0 +1,25 @@
+# Eigen PostgreSQL-add-on (ADR-003): vastgepinde major 16, geen hostpoort, data uitgesloten van HA-back-up.
+# Versie wordt door release.yml gezet; niet met de hand wijzigen.
+name: Beleggingsadviseur PostgreSQL
+description: Database voor de beleggingsadviseur (alleen bereikbaar voor add-ons)
+slug: postgres
+url: https://github.com/jhmelchers/beleggingsadviseur-addons
+version: "16.0.2"
+image: ghcr.io/jhmelchers/beleggingsadviseur-postgres
+arch: [aarch64]
+startup: system
+boot: auto
+init: false
+ports: {}
+backup: cold
+backup_exclude: ["**/pgdata/**"]  # databaseback-up via pg_dump + restic (US-014)
+options:
+  wachtwoord_eigenaar: ""
+  wachtwoord_app: ""
+schema:
+  wachtwoord_eigenaar: password
+  wachtwoord_app: password
+  wachtwoord_worker: password?
+  wachtwoord_mcp: password?
+  wachtwoord_backup: password?
+  netwerk: str?

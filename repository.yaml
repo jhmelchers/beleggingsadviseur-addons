@@ -1,0 +1,4 @@
+# Wordt door release.yml gepubliceerd naar de openbare add-on-repository (ADR-015).
+name: Beleggingsadviseur add-ons
+url: https://github.com/jhmelchers/beleggingsadviseur-addons
+maintainer: jhmelchers
