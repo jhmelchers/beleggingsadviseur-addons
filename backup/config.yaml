@@ -1,0 +1,32 @@
+# Back-up-add-on (US-014, ADR-012): elke nacht pg_dump → restic → hersteltest; ook vlak vóór elke productie-update.
+# Versie wordt door release.yml gezet; niet met de hand wijzigen.
+name: Beleggingsadviseur back-up
+description: Versleutelde nachtelijke back-up van de database met hersteltest
+slug: backup
+url: https://github.com/jhmelchers/beleggingsadviseur-addons
+version: "0.1.5"
+image: ghcr.io/jhmelchers/beleggingsadviseur-backup
+arch: [aarch64]
+startup: application
+boot: auto
+init: false
+homeassistant_api: true
+ports: {}
+options:
+  tijd: "03:15"
+  melding: ""
+  wachtwoord_backup: ""
+  restic_repository: ""
+  restic_wachtwoord: ""
+  r2_access_key_id: ""
+  r2_secret_access_key: ""
+schema:
+  tijd: match(^([01][0-9]|2[0-3]):[0-5][0-9]$)
+  melding: match(^(notify\.[a-z0-9_]+)?$)
+  wachtwoord_backup: password
+  restic_repository: str
+  restic_wachtwoord: password
+  r2_access_key_id: password?
+  r2_secret_access_key: password?
+  database_host: str?
+  database_poort: port?
