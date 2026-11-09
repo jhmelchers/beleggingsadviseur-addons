@@ -4,7 +4,7 @@ name: Beleggingsadviseur PostgreSQL
 description: Database voor de beleggingsadviseur (alleen bereikbaar voor add-ons)
 slug: postgres
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "16.0.2"
+version: "16.0.9"
 image: ghcr.io/jhmelchers/beleggingsadviseur-postgres
 arch: [aarch64]
 startup: system
@@ -23,3 +23,4 @@ schema:
   wachtwoord_mcp: password?
   wachtwoord_backup: password?
   netwerk: str?
+  netwerk6: str?

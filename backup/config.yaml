@@ -4,7 +4,7 @@ name: Beleggingsadviseur back-up
 description: Versleutelde nachtelijke back-up van de database met hersteltest
 slug: backup
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "0.1.8"
+version: "0.1.9"
 image: ghcr.io/jhmelchers/beleggingsadviseur-backup
 arch: [aarch64]
 startup: application
