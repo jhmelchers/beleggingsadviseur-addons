@@ -3,7 +3,7 @@ name: Beleggingsadviseur kern
 description: Kern-API van de beleggingsadviseur (productie)
 slug: kern_prod
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "0.1.10"
+version: "0.1.11"
 image: ghcr.io/jhmelchers/beleggingsadviseur-kern
 arch: [aarch64]
 startup: application
