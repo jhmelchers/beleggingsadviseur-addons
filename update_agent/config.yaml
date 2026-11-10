@@ -4,7 +4,7 @@ name: Beleggingsadviseur update-agent
 description: Gecontroleerde updates van de beleggingsadviseur, met goedkeuring via een melding
 slug: update_agent
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "0.1.14"
+version: "0.1.15"
 image: ghcr.io/jhmelchers/beleggingsadviseur-update-agent
 arch: [aarch64]
 startup: services
