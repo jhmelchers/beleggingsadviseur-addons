@@ -3,7 +3,7 @@ name: Beleggingsadviseur kern (test)
 description: Kern-API van de beleggingsadviseur (test)
 slug: kern_test
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "0.1.23"
+version: "0.1.24"
 image: ghcr.io/jhmelchers/beleggingsadviseur-kern
 arch: [aarch64]
 startup: application
@@ -13,6 +13,7 @@ watchdog: http://[HOST]:[PORT:8080]/healthz
 ports: {}          # geen hostpoort; alleen via cloudflared in het interne add-on-netwerk
 environment:
   ROL: kern
+  OMGEVING: test   # vast; bepaalt o.a. of 'Testdatabase legen' bestaat (ADR-017)
 options:
   access_team_domein: ""
   access_aud: ""
