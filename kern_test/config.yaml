@@ -3,7 +3,7 @@ name: Beleggingsadviseur kern (test)
 description: Kern-API van de beleggingsadviseur (test)
 slug: kern_test
 url: https://github.com/jhmelchers/beleggingsadviseur-addons
-version: "0.1.36"
+version: "0.1.37"
 image: ghcr.io/jhmelchers/beleggingsadviseur-kern
 arch: [aarch64]
 startup: application
